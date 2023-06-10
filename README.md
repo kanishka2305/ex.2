@@ -24,21 +24,45 @@ The result is that combinational logic circuits have no feedback, and any change
 4.	Create nodes for inputs and outputs to generate the timing diagram.
 5.	For different input combinations, generate the timing diagram.
 
-## Simplification:
+## Simplification: 
+![image](https://github.com/kanishka2305/ex.2/assets/113497357/00ab9d25-3dc5-47ee-b011-46229972c36c)
+
 
 ## Truth Table:
+![image](https://github.com/kanishka2305/ex.2/assets/113497357/c8eb66ca-1dfc-4925-b0a1-9cc6f0a784b6)
+
+
 
 ## Program:
-![image](https://github.com/kanishka2305/ex.2/assets/113497357/e4a92944-656c-4c7d-a7a6-b52cc8813b9b)
+module exp2a(a,b,c,d,f1,f2);
+input a,b,c,d;
+output f1,f2;
+wire adash,bdash,cdash,ddash,x,y,z,p,q,r;
+not(adash,a);
+not(bdash,b);
+not(cdash,c);
+not(ddash,d);
+and(x,bdash,ddash);
+and(y,adash,b,d);
+and(z,a,b,cdash);
+or(f1,x,y,z);
+and(p,cdash,d);
+and(q,a,c);
+and(r,b,c);
+or(f2,p,q,r);
+endmodule
 
 
 
 ## RTL Schematic:
+![image](https://github.com/kanishka2305/ex.2/assets/113497357/8b64ec45-4764-4e64-a7fd-62e42f633ec2)
 
 
 
 
 ## Timing Diagram:
+![image](https://github.com/kanishka2305/ex.2/assets/113497357/43ab0a2d-7350-45cb-b52f-dbc8acda095f)
+
 
 
 
